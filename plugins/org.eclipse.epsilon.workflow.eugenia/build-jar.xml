@@ -1,0 +1,11 @@
+<project default="default">
+	
+	<xslt style="../org.eclipse.epsilon.workflow/pluginxml2tasksxml.xslt" in="plugin.xml" out="src/org/eclipse/epsilon/workflow/tasks/eugenia/tasks.xml"/>		
+	
+	<target name="default">
+		<echo>Building ANT EuGENia jar</echo>
+		<delete dir="lib" />
+		<mkdir dir="lib" />
+		<jar destfile="lib/org.eclipse.epsilon.workflow.eugenia.jar" basedir="bin"/>
+	</target>
+</project>
